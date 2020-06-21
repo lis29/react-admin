@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import App from './App.js'
+ReactDOM.render(<App />, document.getElementById("root"))
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+// import { DatePicker, Button, version } from 'antd'
+// import 'antd/dist/antd.css'
+// ReactDOM.render(
+//   <div className="App">
+//     <h1>antd version: {version}</h1>
+//     <DatePicker />
+//     <Button type="primary" style={{ marginLeft: 8 }}>
+//       Primary Button
+//     </Button>
+//   </div>,
+//   document.getElementById("root"));
