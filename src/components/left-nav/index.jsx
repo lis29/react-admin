@@ -14,16 +14,23 @@ class LeftNav extends Component {
     super(props)
     const pathname = props.history.location.pathname
     this.defaultSelectedKeys = pathname
-    const lastIndex = pathname.lastIndexOf('/')
-    const firstIndex = pathname.indexOf('/')
-    if (lastIndex !== 0) {
-      this.defaultOpenKeys = pathname.slice(firstIndex, lastIndex)
+    const arr = pathname.split('/')
+    // console.log(pathname, arr)
+    if (arr.length >= 3) {
+      this.defaultOpenKeys = '/' + arr[1]
+      this.defaultSelectedKeys = '/' + arr[1] + '/' + arr[2]
     } else {
       this.defaultOpenKeys = pathname
     }
+    // console.log(this.defaultSelectedKeys)
+    // console.log(this.defaultOpenKeys)
   }
   componentDidMount() {
-    const pathname = this.props.location.pathname
+    let pathname = this.props.location.pathname
+    const arr = pathname.split('/')
+    if (arr.length >= 3) {
+      pathname = '/' + arr[1] + '/' + arr[2]
+    }
     const selectedTitle = this.getTitleByKeyPath(pathname)
     this.props.selectedMenu(selectedTitle)
   }

@@ -9,7 +9,8 @@ import {
   AreaChartOutlined,
   BarChartOutlined,
   LineChartOutlined,
-  PieChartOutlined
+  PieChartOutlined,
+  WindowsOutlined
 } from '@ant-design/icons';
 const menuList = [
   {
@@ -18,57 +19,75 @@ const menuList = [
     key: '/home',
     // 对应的 path 
     icon: <HomeOutlined />, // 图标名称 
+    isLeaf: true
   },
   {
     title: '商品',
     key: '/products',
     icon: <AppstoreOutlined />,
+    isLeaf: false,
     children: [
       // 子菜单列表 
       {
         title: '品类管理',
         key: '/products/category',
-        icon: <BarsOutlined />
+        icon: <BarsOutlined />,
+        isLeaf: true
       },
       {
         title: '商品管理',
         key: '/products/product',
-        icon: <ToolOutlined />
+        icon: <ToolOutlined />,
+        isLeaf: true
       }
     ]
   },
   {
     title: '用户管理',
     key: '/user',
-    icon: <UserOutlined />
+    icon: <UserOutlined />,
+    isLeaf: true
   },
   {
     title: '角色管理',
     key: '/role',
-    icon: <SafetyOutlined />
+    icon: <SafetyOutlined />,
+    isLeaf: true
   },
   {
     title: '图形图表',
     key: '/charts',
     icon: <AreaChartOutlined />,
+    isLeaf: false,
     children:
       [
         {
           title: '柱形图',
           key: '/charts/bar',
-          icon: <BarChartOutlined />
+          icon: <BarChartOutlined />,
+          isLeaf: true
         },
         {
           title: '折线图',
           key: '/charts/line',
-          icon: <LineChartOutlined />
+          icon: <LineChartOutlined />,
+          isLeaf: true
         },
         {
           title: '饼图',
           key: '/charts/pie',
-          icon: <PieChartOutlined />
+          icon: <PieChartOutlined />,
+          isLeaf: true
         }
       ]
+  },
+  {
+    title: '订单管理',
+    // 菜单标题名称 
+    key: '/order',
+    // 对应的 path 
+    icon: <WindowsOutlined />, // 图标名称 
+    isLeaf: true
   }
 ]
 export default menuList

@@ -51,7 +51,7 @@ export default class Admin extends Component {
                 <Redirect path='/' exact to='/home' />
                 <Route path='/home' component={Home} />
                 <Route path='/products/product' component={Product} />
-                <Route path='/products/category' component={Category} />
+                <Route path='/products/category' component={Category} exact />
                 <Route path='/user' component={User} />
                 <Route path='/role' component={Role} />
                 <Route path='/charts/line' component={Line} />

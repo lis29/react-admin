@@ -70,3 +70,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # react-admin
 React后台管理系统
 
+# mongod --dbpath=/usr/local/MongoDB/data/db --logpath=/usr/local/MongoDB/log/mongo.log
+# node /Users/wp_lis/Documents/前端/react/2019-6月-React全栈项目源码课件笔记/code/admin-server_final/server.js
